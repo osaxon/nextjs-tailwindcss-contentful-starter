@@ -10,7 +10,7 @@ export default function Home() {
       <section className='flex-grow flex'>
         <article className='flex flex-col md:pt-0 cursor-default md:mt-0 md:justify-center text-white layout'>
           <div className='flex flex-col items-center'>
-            <h1 className='mt-10'>The Hollistic Spa Room</h1>
+            <h1 className='mt-10'>The Holistic Spa Room</h1>
             <h4 className='text-center mt-10'>
               Indulge yourself in a Holistic & Spiritual Spa treatments to
               refresh and heal your mind, body and spirit

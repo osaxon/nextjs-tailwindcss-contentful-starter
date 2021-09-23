@@ -4,9 +4,9 @@ import Logo from 'public/img/spa-logo.png';
 
 const links = [
   { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/book', label: 'Book' },
+  { href: '/Services', label: 'Services' },
+  { href: '/Contact', label: 'Contact' },
+  { href: '/Book', label: 'Book' },
 ];
 
 export default function Nav() {
@@ -17,7 +17,7 @@ export default function Nav() {
           <li>
             <div>
               <Link href='/'>
-                <a className='flex md:flex-row hover:text-primary-400 flex-col flex-shrink-0 items-center'>
+                <a className='flex md:flex-row hover:text-red-400 flex-col flex-shrink-0 items-center'>
                   <Image
                     src={Logo}
                     width='100%'
@@ -32,7 +32,7 @@ export default function Nav() {
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
                 <Link href={href}>
-                  <a className='text-white hover:text-primary-400'>{label}</a>
+                  <a className='text-red-50 hover:text-red-400'>{label}</a>
                 </Link>
               </li>
             ))}

@@ -17,19 +17,19 @@
 
   /* Write your own custom base styles here */
   h1 {
-    @apply text-3xl font-bold md:text-5xl font-primary;
+    @apply text-3xl font-bold md:text-5xl font-courgette;
   }
 
   h2 {
-    @apply text-2xl font-bold md:text-4xl font-primary;
+    @apply text-2xl font-bold md:text-4xl font-courgette;
   }
 
   h3 {
-    @apply text-xl font-bold md:text-3xl font-primary;
+    @apply text-xl font-bold md:text-3xl font-courgette;
   }
 
   h4 {
-    @apply text-lg font-bold font-primary;
+    @apply text-lg font-bold font-courgette;
   }
 
   body {
@@ -53,7 +53,7 @@
 @layer utilities {
   .animated-underline {
     background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(to right, #bde0fe, #a2d2ff);
+      linear-gradient(to right, #ffafcc, #ffafcc);
     background-size: 100% 2px, 0% 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;

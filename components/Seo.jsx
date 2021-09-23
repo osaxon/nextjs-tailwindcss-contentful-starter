@@ -4,9 +4,10 @@ import { useRouter } from 'next/router';
 export default function Seo(props) {
   const router = useRouter();
   const meta = {
-    title: 'Mamucium',
-    site_name: 'Mamucium',
-    description: 'Blog about the the city of Manchester',
+    title: 'Holistic Spa Room',
+    site_name: 'Holistic Spa Room',
+    description:
+      'Reiki is an energy healing technique that involves a Reiki master using gentle hand movements to guide the flow of healthy energy.',
     url: '',
     image: '',
     type: 'website',
