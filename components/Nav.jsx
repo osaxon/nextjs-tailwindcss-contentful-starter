@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import LogoSVG from 'public/img/logo.svg';
+import Logo from 'public/img/spa-logo.png';
 
 const links = [
   { href: '/about', label: 'About' },
-  { href: '/', label: 'Contact' },
-  { href: '/', label: 'Book' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/book', label: 'Book' },
 ];
 
 export default function Nav() {
@@ -17,10 +18,12 @@ export default function Nav() {
             <div>
               <Link href='/'>
                 <a className='flex md:flex-row hover:text-primary-400 flex-col flex-shrink-0 items-center'>
-                  <LogoSVG width={100} className='stroke-current ' />
-                  <h2 className='uppercase font-serif hover:cursor-pointer'>
-                    Company
-                  </h2>
+                  <Image
+                    src={Logo}
+                    width='100%'
+                    height='100%'
+                    objectFit='contain'
+                  />
                 </a>
               </Link>
             </div>
@@ -29,7 +32,7 @@ export default function Nav() {
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
                 <Link href={href}>
-                  <a className='text-white hover:text-green-400'>{label}</a>
+                  <a className='text-white hover:text-primary-400'>{label}</a>
                 </Link>
               </li>
             ))}
