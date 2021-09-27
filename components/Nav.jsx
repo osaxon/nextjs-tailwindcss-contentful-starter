@@ -7,7 +7,6 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/Services', label: 'Services' },
   { href: '/Contact', label: 'Contact' },
-  { href: 'https://bookwhen.com/osaxon', label: 'Book' },
 ];
 
 export default function Nav() {
@@ -26,7 +25,7 @@ export default function Nav() {
             <li key={`${href}${label}`}>
               <CustomLink
                 href={href}
-                className='text-primary-600 text-xl hover:text-primary-300'
+                className='text-primary-900 text-xl hover:text-primary-500'
               >
                 {label}
               </CustomLink>

@@ -1,6 +1,8 @@
 import React from 'react';
 import Seo from '@/components/Seo';
+
 import { createClient } from 'contentful';
+import CustomLink from '@/components/CustomLink';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -39,12 +41,24 @@ export async function getStaticProps({ params }) {
 
 const ServiceDetails = ({ service }) => {
   console.log(service);
-  const { name, description, slug, image } = service.fields;
+  const { name, description, slug, image, bookingUrl } = service.fields;
   return (
     <>
       <Seo title={`Page about ${name}`} />
       <section className='flex-grow flex mb-auto layout'>
         <h1>{name}</h1>
+        <div className='mt-4 flex flex-col'>
+          {bookingUrl ? (
+            <CustomLink
+              className='text-center bg-green-600 hover:bg-green-400 text-green-50 font-bold text-xl rounded shadow py-2'
+              href={bookingUrl}
+            >
+              Book now
+            </CustomLink>
+          ) : (
+            ''
+          )}
+        </div>
       </section>
     </>
   );
