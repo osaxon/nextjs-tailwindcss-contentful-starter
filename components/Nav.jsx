@@ -11,17 +11,17 @@ const links = [
 
 export default function Nav() {
   return (
-    <header className='sticky top-0 z-50 bg-dark flex-grow-0'>
+    <header className='sticky top-0 z-50 bg-primary-50 flex-grow-0'>
       <nav className=''>
         <ul className='flex flex-col md:flex-row items-center justify-between py-4 px-6 layout text-white'>
           <li>
             <div>
               <Link href='/'>
-                <a className='flex md:flex-row hover:text-red-400 flex-col flex-shrink-0 items-center'>
+                <a className='flex md:flex-row hover:text-primary-600 flex-col flex-shrink-0 items-center'>
                   <Image
                     src={Logo}
-                    width='100%'
-                    height='100%'
+                    width='80%'
+                    height='80%'
                     objectFit='contain'
                   />
                 </a>
@@ -32,7 +32,9 @@ export default function Nav() {
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
                 <Link href={href}>
-                  <a className='text-red-50 hover:text-red-400'>{label}</a>
+                  <a className='text-primary-600 hover:text-primary-300'>
+                    {label}
+                  </a>
                 </Link>
               </li>
             ))}

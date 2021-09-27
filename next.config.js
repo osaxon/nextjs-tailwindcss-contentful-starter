@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
   images: {
-    domains: ['vercel.com'],
+    domains: ['vercel.com', 'images.ctfassets.net'],
   },
   webpack(config) {
     config.module.rules.push({

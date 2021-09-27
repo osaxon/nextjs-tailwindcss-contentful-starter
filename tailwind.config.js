@@ -12,8 +12,16 @@ module.exports = {
       },
       colors: {
         primary: {
-          400: '#bde0fe',
-          500: '#a2d2ff',
+          50: '#DDE1F5',
+          100: '#D4D5F6',
+          200: '#CCCAF7',
+          300: '#C3BEF7',
+          400: '#B5A3F9',
+          500: '#A787FB',
+          600: '#A079FC',
+          700: '#996BFD',
+          800: '#925DFE',
+          900: '#8A4FFF',
         },
         dark: '#CDB4DB',
         pink: '#ffafcc',

@@ -12,7 +12,7 @@ export default function CustomLink({
       {...rest}
       openNewTab={openNewTab}
       className={clsx(
-        'inline-flex items-center font-bold hover:text-red-400',
+        'inline-flex items-center font-bold hover:text-primary-700',
         className
       )}
     >

@@ -1,14 +1,33 @@
 import Seo from '@/components/Seo';
 import React from 'react';
+import { createClient } from 'contentful';
+import ServiceCard from '@/components/ServiceCard';
 
-const Services = () => {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+
+  const res = await client.getEntries({ content_type: 'service' });
+
+  return {
+    props: {
+      services: res.items,
+    },
+  };
+}
+
+const Services = ({ services }) => {
   return (
     <>
       <Seo title='Services' />
-      <section className='flex-grow flex mb-auto'>
-        <article className='layout py-10 text-white'>
-          <h1>Services</h1>
-        </article>
+      <section className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-4 layout'>
+        {services.map((service) => (
+          <article key={service.sys.id} className=''>
+            <ServiceCard service={service} />
+          </article>
+        ))}
       </section>
     </>
   );
