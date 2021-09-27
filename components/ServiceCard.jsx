@@ -9,7 +9,7 @@ export default function ServiceCard({ service }) {
     <div className='relative shadow flex flex-col justify-between bg-primary-50 rounded p-4 h-full'>
       <div className='relative flex items-end'>
         <Image
-          src={'https://' + image.fields.file.url}
+          src={'https:' + image.fields.file.url}
           width={image.fields.file.details.image.width}
           height={image.fields.file.details.image.height}
           objectFit='cover'
