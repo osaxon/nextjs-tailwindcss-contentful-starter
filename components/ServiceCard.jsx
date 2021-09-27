@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CustomLink from './CustomLink';
 
 export default function ServiceCard({ service }) {
   const { name, description, slug, image } = service.fields;
   return (
-    <div className='shadow flex flex-col items-center justify-center bg-primary-100 rounded-lg p-4'>
+    <div className='shadow flex flex-col justify-between bg-primary-100 rounded-lg p-4 h-full'>
       <div className=''>
         <Image
           src={'https://' + image.fields.file.url}
@@ -15,18 +16,28 @@ export default function ServiceCard({ service }) {
           className='mix-blend-multiply'
         />
       </div>
-      <div className='flex flex-col'>
+
+      <div className='flex flex-col justify-between flex-grow'>
         <div className='info'>
           <h4 className='text-center text-2xl'>{name}</h4>
           <p className='text-justify text-base'>{description}</p>
         </div>
 
-        {/* button */}
-        <button className='text-center bg-primary-900 hover:bg-primary-700 text-primary-50 font-bold text-xl rounded-md shadow py-2 mt-4'>
-          <Link href={'/services/' + slug}>
-            <a>Find out more</a>
-          </Link>
-        </button>
+        {/* buttons */}
+        <div className='mt-4 flex flex-col gap-2'>
+          <CustomLink
+            className='bg-primary-900 hover:bg-primary-700 text-primary-50 font-bold text-xl rounded-md shadow py-2'
+            href={'/services/' + slug}
+          >
+            Find out more
+          </CustomLink>
+          <CustomLink
+            className='text-center bg-green-600 hover:bg-green-400 text-green-50 font-bold text-xl rounded-md shadow py-2'
+            href='https://bookwhen.com/osaxon#focus=ev-sadp-20211004100000'
+          >
+            Book now
+          </CustomLink>
+        </div>
       </div>
     </div>
   );
