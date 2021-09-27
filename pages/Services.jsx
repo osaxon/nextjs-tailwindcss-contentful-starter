@@ -22,7 +22,7 @@ const Services = ({ services }) => {
   return (
     <>
       <Seo title='Services' />
-      <section className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-4 layout'>
+      <section className='grid grid-cols-1 gap-10 md:grid-cols-2 my-10 layout'>
         {services.map((service) => (
           <article key={service.sys.id} className=''>
             <ServiceCard service={service} />
