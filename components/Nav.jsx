@@ -11,8 +11,8 @@ const links = [
 
 export default function Nav() {
   return (
-    <header className='sticky top-0 z-50 flex-grow-0 bg-gradient-to-br from-primary-50 to-gray-100'>
-      <nav className='flex flex-col md:flex-row items-center justify-between py-4 px-6 layout'>
+    <header className='sticky top-0 z-50 flex-grow-0 bg-primary-50 flex flex-col'>
+      <div className='flex flex-col md:flex-row items-center justify-between py-4 px-6 layout'>
         <div>
           <Link href='/'>
             <a className='flex md:flex-row hover:text-primary-600 flex-col flex-shrink-0 items-center'>
@@ -20,12 +20,15 @@ export default function Nav() {
             </a>
           </Link>
         </div>
-        <ul className='flex items-center justify-between space-x-4'>
+        <h1 className='text-textDark'>The Holistic Spa Room</h1>
+      </div>
+      <nav>
+        <ul className='flex items-center justify-around md:mx-10'>
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
               <CustomLink
                 href={href}
-                className='text-primary-900 text-xl hover:text-primary-500'
+                className='text-textLight bg-primary-900 text-xl animated-underline px-2 hover:bg-opacity-50 rounded-t-md'
               >
                 {label}
               </CustomLink>

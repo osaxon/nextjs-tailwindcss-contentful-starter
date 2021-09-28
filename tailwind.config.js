@@ -23,6 +23,8 @@ module.exports = {
           800: '#925DFE',
           900: '#8A4FFF',
         },
+        textDark: '#7462E0',
+        textLight: '#E4F1FE',
         dark: '#CDB4DB',
         pink: '#ffafcc',
       },
