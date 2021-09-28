@@ -12,7 +12,7 @@ export default function ServiceCard({ service }) {
           src={'https:' + image.fields.file.url}
           width={image.fields.file.details.image.width}
           height={image.fields.file.details.image.height}
-          className='relative'
+          className='relative bg-white'
         />
       </CustomLink>
       <h4 className='absolute bg-primary-900 shadow rounded-br-md font-sans text-textLight text-4xl px-4 py-2 tracking-wide top-0'>
