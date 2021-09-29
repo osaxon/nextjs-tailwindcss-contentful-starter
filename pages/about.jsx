@@ -2,8 +2,6 @@ import React from 'react';
 import Seo from '@/components/Seo';
 import Image from 'next/image';
 
-import Buddah from '../public/img/buddah.jpg';
-
 const about = () => {
   return (
     <>

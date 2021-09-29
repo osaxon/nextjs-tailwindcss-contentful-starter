@@ -15,7 +15,7 @@ export default function ServiceCard({ service }) {
           className='relative bg-white'
         />
       </CustomLink>
-      <h4 className='absolute bg-primary-900 shadow rounded-br-md font-sans text-textLight text-4xl px-4 py-2 tracking-wide top-0'>
+      <h4 className='absolute bg-gray-50 shadow rounded-br-md text-4xl px-4 py-2 tracking-wide top-0'>
         {name}
       </h4>
     </div>

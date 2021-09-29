@@ -17,19 +17,19 @@
 
   /* Write your own custom base styles here */
   h1 {
-    @apply text-3xl font-bold md:text-5xl font-courgette;
+    @apply text-3xl font-bold md:text-5xl;
   }
 
   h2 {
-    @apply text-2xl font-bold md:text-4xl font-courgette;
+    @apply text-2xl font-bold md:text-4xl;
   }
 
   h3 {
-    @apply text-xl font-bold md:text-3xl font-courgette;
+    @apply text-xl font-bold md:text-3xl;
   }
 
   h4 {
-    @apply text-lg font-bold font-courgette;
+    @apply text-lg font-bold;
   }
 
   body {

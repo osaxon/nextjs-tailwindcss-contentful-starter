@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 export default function Seo(props) {
   const router = useRouter();
   const meta = {
-    title: 'Holistic Spa Room',
-    site_name: 'Holistic Spa Room',
+    title: 'next js template',
+    site_name: 'next js template',
     description:
-      'Reiki is an energy healing technique that involves a Reiki master using gentle hand movements to guide the flow of healthy energy.',
+      'Template and website starter for Next.JS with Tailwind CSS styling and Contentful CMS integration.',
     url: '',
     image: '',
     type: 'website',

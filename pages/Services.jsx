@@ -10,10 +10,14 @@ export async function getStaticProps() {
   });
 
   const res = await client.getEntries({ content_type: 'service' });
+  const items = res.items;
+
+  // we want items with lower order number to appear first
+  items.sort((a, b) => a.fields.order - b.fields.order);
 
   return {
     props: {
-      services: res.items,
+      services: items,
     },
   };
 }
@@ -22,12 +26,19 @@ const Services = ({ services }) => {
   return (
     <>
       <Seo title='Services' />
-      <section className='grid grid-cols-1 gap-4 md:grid-cols-2 my-10 layout'>
-        {services.map((service) => (
-          <article key={service.sys.id} className=''>
-            <ServiceCard service={service} />
-          </article>
-        ))}
+      <section className='layout py-4'>
+        <h2>Services</h2>
+        <p className='prose'>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto,
+          vitae?
+        </p>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 my-10'>
+          {services.map((service) => (
+            <article key={service.sys.id} className=''>
+              <ServiceCard service={service} />
+            </article>
+          ))}
+        </div>
       </section>
     </>
   );

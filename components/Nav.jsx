@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from 'public/img/spa-logo.png';
+import Logo from 'public/img/logo.png';
 import CustomLink from './CustomLink';
 
 const links = [
@@ -11,11 +11,11 @@ const links = [
 
 export default function Nav() {
   return (
-    <header className='sticky top-0 z-50 flex-grow-0 bg-primary-50 flex flex-col'>
+    <header className='sticky top-0 z-50 flex-grow-0 bg-gray-50 flex flex-col'>
       <div className='flex flex-col md:flex-row justify-between mt-4 layout'>
         {/* Logo */}
         <Link href='/'>
-          <a className='flex md:flex-row hover:text-primary-600 flex-col flex-shrink-0 items-center'>
+          <a className='flex md:flex-row hover:text-gray-600 flex-col flex-shrink-0 items-center'>
             <Image src={Logo} width='100%' height='100%' objectFit='contain' />
           </a>
         </Link>
@@ -23,7 +23,7 @@ export default function Nav() {
         {/* Title and Navigation */}
         <div className='flex flex-col justify-between'>
           <div className=''>
-            <h1 className='text-textDark text-center'>The Holistic Spa Room</h1>
+            <h1 className='text-center'>Company Name</h1>
           </div>
 
           {/* Nav Links */}
@@ -33,7 +33,7 @@ export default function Nav() {
                 <li key={`${href}${label}`}>
                   <CustomLink
                     href={href}
-                    className='text-textLight bg-primary-900 text-xl px-2 animated-underline hover:bg-opacity-50 rounded-t-md'
+                    className='bg-gray-100 text-xl px-2 animated-underline hover:bg-opacity-50 rounded-t-md'
                   >
                     {label}
                   </CustomLink>

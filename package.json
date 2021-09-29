@@ -12,6 +12,7 @@
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
     "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.4",
     "clsx": "^1.1.1",
     "contentful": "^9.0.0",
