@@ -3,8 +3,8 @@ import { SocialIcon } from 'react-social-icons';
 
 const Footer = () => {
   return (
-    <footer className='flex-grow-0 border-t layout py-2'>
-      <div className='flex flex-col items-center justify-center text-white layout'>
+    <footer className='flex-grow-0 py-2 bg-gray-200'>
+      <div className='flex flex-col layout items-center justify-center text-white layout'>
         <div className='flex gap-2 mb-2'>
           <SocialIcon url='https://twitter.com/' />
           <SocialIcon url='https://github.com/' />

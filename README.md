@@ -1,19 +1,15 @@
-This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/nextjs-tailwind-starter).
+This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter created by [Oli Saxon](https://github.com/osaxon/nextjs-tailwindcss-contentful-starter).
 
-See the deployment on [https://nextjs-tailwind-starter.theodorusclarence.com/](https://nextjs-tailwind-starter.theodorusclarence.com/)
 
 ![Screenshots](https://www.site-shot.com/cached_image/3aslTKJcEeuO5AJCrBEAAg)
 
 ## Getting Started
 
-To use this starter, you can use create-next-app to do it by:
+To use this starter, use create-next-app and specify this repo as a template URL:
 ```bash
-npx create-next-app -e https://github.com/theodorusclarence/nextjs-tailwind-starter project-name
+npx create-next-app -e https://github.com/osaxon/nextjs-tailwindcss-contentful-starter project-name
 ```
 
-or
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fnextjs-tailwind-starter)
 
 First, run the development server:
 
@@ -28,10 +24,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 ## What's Inside
-
-### Inter Fonts
-
-Inter fonts is self hosted. The default weights are `400, 600, 700`. To add more, use fontsquirrel.
 
 ### UnstyledLink Component
 Used as a component for Next.js Link. Will render out Next/Link if the href started with `/` or `#`, else will render an `a` tag with `target='_blank'`.

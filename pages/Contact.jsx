@@ -2,17 +2,17 @@ import React from 'react';
 import Seo from '@/components/Seo';
 import Image from 'next/image';
 
-const About = () => {
+const Contact = () => {
   return (
     <>
-      <Seo templateTitle='About' />
+      <Seo templateTitle='Contact' />
       <section className='flex-grow flex mb-auto py-4'>
         <article className='layout'>
-          <h2>About</h2>
+          <h2>Contact</h2>
         </article>
       </section>
     </>
   );
 };
 
-export default About;
+export default Contact;
