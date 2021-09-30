@@ -12,16 +12,16 @@ const links = [
 export default function Nav() {
   return (
     <header className='sticky top-0 z-50 flex-grow-0 bg-gray-200 flex flex-col'>
-      <div className='flex flex-col md:flex-row justify-between mt-4 layout'>
+      <div className='flex flex-col md:flex-row justify-between layout'>
         {/* Logo */}
         <Link href='/'>
-          <a className='flex md:flex-row hover:text-gray-600 flex-col flex-shrink-0 items-center'>
+          <a className='flex md:flex-row hover:text-gray-600 flex-col flex-shrink-0'>
             <Image src={Logo} width='100%' height='100%' objectFit='contain' />
           </a>
         </Link>
 
         {/* Title and Navigation */}
-        <div className='flex flex-col justify-between'>
+        <div className='flex flex-col justify-end'>
           <div className=''>
             <h1 className='text-center text-green-700'>Company Name</h1>
           </div>
