@@ -33,7 +33,6 @@ const Footer = () => {
         }
 
         setData(data.generalCollection.items);
-        console.log(data);
       });
   }, []);
 
