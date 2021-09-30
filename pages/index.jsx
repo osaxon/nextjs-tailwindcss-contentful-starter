@@ -1,5 +1,4 @@
 import Seo from '@/components/Seo';
-import CustomLink from '@/components/CustomLink';
 import Image from 'next/image';
 import Logo from '@/public/img/logo.png';
 
@@ -21,6 +20,7 @@ export default function Home() {
                 width='200%'
                 height='200%'
                 objectFit='contain'
+                alt='Logo'
               />
             </div>
           </div>

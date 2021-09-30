@@ -1,6 +1,5 @@
 import React from 'react';
 import Seo from '@/components/Seo';
-import Image from 'next/image';
 
 const Contact = () => {
   return (

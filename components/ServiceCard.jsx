@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import CustomLink from './CustomLink';
 
 export default function ServiceCard({ service }) {
-  const { name, description, slug, image, bookingUrl } = service.fields;
+  const { name, slug, image } = service.fields;
   return (
     <div className='relative shadow flex flex-col justify-between'>
       <CustomLink className='relative' href={'/services/' + slug}>
