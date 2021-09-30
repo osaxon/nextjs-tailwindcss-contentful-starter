@@ -4,7 +4,7 @@ import Logo from 'public/img/logo.png';
 import CustomLink from './CustomLink';
 
 const links = [
-  { href: '/About', label: 'About' },
+  { href: '/about', label: 'About' },
   { href: '/Services', label: 'Services' },
   { href: '/Contact', label: 'Contact' },
 ];

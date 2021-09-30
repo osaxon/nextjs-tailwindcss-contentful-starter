@@ -1,7 +1,7 @@
 import React from 'react';
 import Seo from '@/components/Seo';
 
-const About = () => {
+const about = () => {
   return (
     <>
       <Seo templateTitle='About' />
@@ -15,4 +15,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default about;
