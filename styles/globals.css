@@ -63,8 +63,23 @@
     background-repeat: no-repeat;
     transition: background-size 0.2s ease-out;
   }
+  .animate-fall {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    animation: move 50s linear 0s infinite backwards;
+  }
   .animated-underline:hover,
   .animated-underline:focus {
     background-size: 0% 2px, 100% 2px;
+  }
+
+  @-webkit-keyframes move {
+    from {
+      -webkit-transform: translateX(-100px);
+    }
+    to {
+      -webkit-transform: translateX(1000px);
+    }
   }
 }

@@ -20,33 +20,16 @@ export default function Nav() {
   const loaded = useLoaded();
 
   return (
-    <header className='sticky top-0 z-50 flex-grow-0 bg-indigo-200 dark:bg-indigo-900 flex flex-col'>
-      <div className='flex flex-col md:flex-row justify-between items-center layout'>
-        {/* Logo */}
-
-        <Link href='/'>
-          <a className='flex md:flex-row flex-col items-center flex-shrink-0 h-20 w-20'>
-            {/* <Image src={Logo} width='100%' height='100%' objectFit='contain' /> */}
-            <SvgLogo className='dark:fill-red fill-green' />
-          </a>
-        </Link>
-
-        <div className='dark:bg-indigo-400 rounded-full shadow-lg absolute right-8 top-6 md:right-auto md:top-auto md:relative h-10 w-10'>
-          {loaded && colorTheme === 'light' ? (
-            <SvgBulb
-              className='stroke-yellow rounded-full p-1'
-              onClick={() => setTheme('light')}
-            />
-          ) : (
-            <SvgMoon
-              className='stroke-blue bg-yellow-200 rounded-full p-1'
-              onClick={() => setTheme('dark')}
-            />
-          )}
-        </div>
-
-        {/* Nav Links */}
-        <nav className='flex flex-col mt-2'>
+    <header className='sticky top-0 z-50 flex-grow-0 bg-indigo-200 dark:bg-indigo-900'>
+      <div className='flex flex-col justify-between md:items-start items-center layout'>
+        {/* Nav Links & Logo */}
+        <nav className='flex flex-col md:flex-row items-center'>
+          <Link href='/'>
+            <a className='flex md:flex-row flex-col items-center flex-shrink-0 h-20 w-20'>
+              {/* <Image src={Logo} width='100%' height='100%' objectFit='contain' /> */}
+              <SvgLogo className='dark:fill-red fill-green ' />
+            </a>
+          </Link>
           <ul className='flex md:justify-end gap-2'>
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
@@ -60,6 +43,22 @@ export default function Nav() {
             ))}
           </ul>
         </nav>
+
+        <div className='absolute layout flex flex-col justify-end items-end'>
+          <div className='dark:bg-indigo-400 rounded-full shadow-lg h-10 w-10 mt-4'>
+            {loaded && colorTheme === 'light' ? (
+              <SvgBulb
+                className='stroke-yellow rounded-full p-1'
+                onClick={() => setTheme('light')}
+              />
+            ) : (
+              <SvgMoon
+                className='stroke-blue bg-yellow-200 rounded-full p-1'
+                onClick={() => setTheme('dark')}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </header>
   );
