@@ -21,15 +21,19 @@
   }
 
   h2 {
-    @apply text-2xl font-bold md:text-4xl text-gray-50;
+    @apply text-2xl font-bold md:text-4xl text-gray-700 dark:text-gray-50;
   }
 
   h3 {
-    @apply text-xl font-bold md:text-3xl text-gray-50;
+    @apply text-xl font-bold md:text-3xl text-gray-700 dark:text-gray-50;
   }
 
   h4 {
-    @apply text-lg font-bold text-gray-50;
+    @apply text-lg font-bold text-gray-700 dark:text-gray-50;
+  }
+
+  p {
+    @apply text-gray-700 dark:text-gray-50;
   }
 
   body {
@@ -63,20 +67,4 @@
   .animated-underline:focus {
     background-size: 0% 2px, 100% 2px;
   }
-}
-
-.dark {
-  --color-bg-primary: #2d3748;
-  --color-bg-secondary: #283141;
-  --color-text-primary: #f7fafc;
-  --color-text-secondary: #e2e8f0;
-  --color-text-accent: #81e6d9;
-}
-
-.light {
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #edf2f7;
-  --color-text-primary: #2d3748;
-  --color-text-secondary: #4a5568;
-  --color-text-accent: #2b6cb0;
 }

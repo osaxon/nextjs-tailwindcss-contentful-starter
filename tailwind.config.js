@@ -5,6 +5,20 @@ module.exports = {
   purge: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class', // false 'media' or 'class'
   theme: {
+    fill: (theme) => ({
+      red: theme('colors.red.500'),
+      green: theme('colors.green.400'),
+      blue: theme('colors.blue.500'),
+      white: theme('colors.white'),
+      dark: theme('colors.indigo.400'),
+    }),
+    stroke: (theme) => ({
+      red: theme('colors.red.500'),
+      green: theme('colors.green.500'),
+      blue: theme('colors.blue.500'),
+      black: theme('colors.black'),
+      yellow: theme('colors.yellow.300'),
+    }),
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
