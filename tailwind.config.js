@@ -11,6 +11,7 @@ module.exports = {
       blue: theme('colors.blue.500'),
       white: theme('colors.white'),
       dark: theme('colors.indigo.400'),
+      yellow: theme('colors.yellow.400'),
     }),
     stroke: (theme) => ({
       red: theme('colors.red.500'),
@@ -32,6 +33,9 @@ module.exports = {
         accent: 'var(--color-text-accent)',
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
+      },
+      animation: {
+        'spin-slow': 'spin 60s linear infinite',
       },
     },
   },

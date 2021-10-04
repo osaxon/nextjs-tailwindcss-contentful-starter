@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Logo from 'public/img/logo.png';
 import CustomLink from './CustomLink';
 import SvgBulb from './SvgBulb.jsx';
 import SvgMoon from './SvgMoon';
@@ -20,17 +17,24 @@ export default function Nav() {
   const loaded = useLoaded();
 
   return (
-    <header className='sticky top-0 z-50 flex-grow-0 bg-indigo-200 dark:bg-indigo-900'>
-      <div className='flex flex-col justify-between md:items-start items-center layout'>
+    <header className='sticky top-0 z-50 flex-grow-0 bg-indigo-200 dark:bg-indigo-900 transition-colors'>
+      <div className='flex flex-col layout'>
         {/* Nav Links & Logo */}
-        <nav className='flex flex-col md:flex-row items-center'>
-          <Link href='/'>
-            <a className='flex md:flex-row flex-col items-center flex-shrink-0 h-20 w-20'>
-              {/* <Image src={Logo} width='100%' height='100%' objectFit='contain' /> */}
-              <SvgLogo className='dark:fill-red fill-green ' />
-            </a>
-          </Link>
-          <ul className='flex md:justify-end gap-2'>
+
+        <nav className='flex flex-col md:flex-row z-50 w-full'>
+          <div className='flex items-center w-full'>
+            {/* Logo */}
+            <CustomLink
+              className='flex md:flex-row flex-col items-center flex-shrink-0 h-20 w-20'
+              href='/'
+            >
+              <SvgLogo className='dark:fill-red fill-green transition-colors' />
+            </CustomLink>
+            <h4>Website Heading</h4>
+          </div>
+
+          {/* Nav links */}
+          <ul className='flex justify-center items-center'>
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
                 <CustomLink
@@ -44,21 +48,7 @@ export default function Nav() {
           </ul>
         </nav>
 
-        <div className='absolute layout flex flex-col justify-end items-end'>
-          <div className='dark:bg-indigo-400 rounded-full shadow-lg h-10 w-10 mt-4'>
-            {loaded && colorTheme === 'light' ? (
-              <SvgBulb
-                className='stroke-yellow rounded-full p-1'
-                onClick={() => setTheme('light')}
-              />
-            ) : (
-              <SvgMoon
-                className='stroke-blue bg-yellow-200 rounded-full p-1'
-                onClick={() => setTheme('dark')}
-              />
-            )}
-          </div>
-        </div>
+        {/* Ligh / Dark toggle */}
       </div>
     </header>
   );
