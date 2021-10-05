@@ -1,22 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import CustomLink from './CustomLink';
+import CustomImage from './CustomImage';
 
 export default function ServiceCard({ service }) {
   const { name, slug, image } = service.fields;
   return (
-    <div className='relative shadow flex flex-col justify-between'>
+    <article className='relative shadow flex flex-col justify-between'>
+      <h4 className='p-2'>{name}</h4>
       <CustomLink className='relative' href={'/services/' + slug}>
-        <Image
-          src={'https:' + image.fields.file.url}
+        <CustomImage
+          image={'https:' + image.fields.file.url}
           width={image.fields.file.details.image.width}
           height={image.fields.file.details.image.height}
-          className='relative dark:bg-gray-300'
         />
       </CustomLink>
-      <h4 className='absolute dark:bg-gray-700 bg-green-400 shadow rounded-br-md text-4xl px-4 py-2 tracking-wide top-0'>
-        {name}
-      </h4>
-    </div>
+    </article>
   );
 }

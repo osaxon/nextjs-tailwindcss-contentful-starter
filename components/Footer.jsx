@@ -1,4 +1,4 @@
-import CustomLink from '@/components/CustomLink';
+import CustomLink from 'components/Utils/CustomLink.jsx';
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { useEffect, useState } from 'react';
@@ -43,7 +43,13 @@ const Footer = () => {
       <div className='flex flex-col layout items-center justify-center text-white layout'>
         <div className='flex gap-2 mb-2'>
           {data.map((data) => {
-            return <SocialIcon url={data.socialUrl} key={data.socialUrl} />;
+            return (
+              <SocialIcon
+                url={data.socialUrl}
+                key={data.socialUrl}
+                style={{ height: 25, width: 25 }}
+              />
+            );
           })}
         </div>
         <div className='text-gray-500'>

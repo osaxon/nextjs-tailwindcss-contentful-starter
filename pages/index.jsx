@@ -1,8 +1,5 @@
-import Seo from '@/components/Seo';
-import Image from 'next/image';
-import Logo from '@/public/img/logo.png';
-import SvgLogo from '@/components/SvgLogo';
-import SvgBall from '@/components/Ball';
+import Seo from '@/components/Utils/Seo';
+import SvgBall from '@/components/SvgComps/Ball';
 
 export default function Home() {
   return (
