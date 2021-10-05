@@ -3,7 +3,7 @@ import Footer from '../Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div className='dark:bg-gray-800 bg-purple-50'>
+    <div className='bg-azure-800 dark:bg-opacity-90 bg-opacity-10'>
       <section className='flex min-h-screen flex-col justify-between'>
         <Header />
         {children}

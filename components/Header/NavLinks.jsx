@@ -6,12 +6,14 @@ const links = [
   { href: '/Contact', label: 'Contact' },
 ];
 
-const NavLinks = () => {
+const NavLinks = (props) => {
   return (
-    <ul className='flex flex-col md:flex-row absolute md:relative'>
+    <ul className='flex flex-col md:flex-row w-full m-2 justify-between'>
       {links.map(({ href, label }) => (
-        <li key={href} className='pr-2'>
-          <CustomLink href={href}>{label}</CustomLink>
+        <li onClick={props.closeMenu} key={href} className='px-2 text-azure-50'>
+          <CustomLink href={href}>
+            <h4>{label}</h4>
+          </CustomLink>
         </li>
       ))}
     </ul>

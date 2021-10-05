@@ -1,4 +1,4 @@
-import Seo from '@/components/Seo';
+import Seo from '@/components/Utils/Seo';
 import React from 'react';
 import { useState } from 'react';
 import { createClient } from 'contentful';

@@ -1,6 +1,8 @@
 import React from 'react';
 import useDarkMode from './hooks/useDarkMode';
 import { useLoaded } from './hooks/useLoaded';
+import SvgBulb from './SvgComps/SvgBulb';
+import SvgMoon from './SvgComps/SvgMoon';
 
 const DarkModeToggle = () => {
   const loaded = useLoaded();
@@ -8,15 +10,15 @@ const DarkModeToggle = () => {
 
   return (
     <div className='flex items-center justify-end pt-2 layout'>
-      <div className='rounded-fullh-8 w-8'>
+      <div className='rounded-full h-10 w-10'>
         {loaded && colorTheme === 'light' ? (
           <SvgBulb
-            className='stroke-yellow rounded-full p-1'
+            className='stroke-red rounded-full p-1'
             onClick={() => setTheme('light')}
           />
         ) : (
           <SvgMoon
-            className='stroke-yellow rounded-full p-1'
+            className='stroke-leaf rounded-full p-1'
             onClick={() => setTheme('dark')}
           />
         )}

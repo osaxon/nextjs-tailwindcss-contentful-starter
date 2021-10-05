@@ -14,7 +14,7 @@ export default function Home() {
               </h2>
             </div>
             <div className='absolute bottom-1/3 '>
-              <div className='w-64 h-64 fill-yellow dark:fill-red transition-all'>
+              <div className='w-64 h-64 fill-leaf dark:fill-red transition-all'>
                 <SvgBall />
               </div>
             </div>

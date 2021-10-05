@@ -10,7 +10,7 @@ const links = [
 
 const NavMenu = (props) => {
   return (
-    <div className='hidden md:flex'>
+    <div className='hidden md:flex h-20 items-center'>
       <NavLinks />
     </div>
   );

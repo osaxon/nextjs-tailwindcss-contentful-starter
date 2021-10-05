@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import CustomLink from './CustomLink';
-import CustomImage from './CustomImage';
+import CustomLink from './Utils/CustomLink';
+import CustomImage from './Utils/CustomImage';
 
 export default function ServiceCard({ service }) {
   const { name, slug, image } = service.fields;
