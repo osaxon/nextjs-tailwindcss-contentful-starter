@@ -1,8 +1,7 @@
 import NavLinks from './NavLinks';
 import { useState } from 'react';
-import SvgCoil from '../SvgComps/SvgCoil';
 import useWindowSize from '../hooks/useWindowSize';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import { CgMenuRound } from 'react-icons/cg';
 
 const MobileNavigation = () => {
