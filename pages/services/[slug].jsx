@@ -31,6 +31,7 @@ export async function getStaticProps({ params }) {
     content_type: 'service',
     'fields.slug': params.slug,
   });
+  console.log(`>>>>>>>>>>>>>>>>>>>>>>>>>${params.slug}`);
 
   return {
     props: {
@@ -40,7 +41,7 @@ export async function getStaticProps({ params }) {
 }
 
 const ServiceDetails = ({ service }) => {
-  console.log(service);
+  console.log('/////////////////////////////////' + service);
   const { name, description, slug, image, bookingUrl } = service.fields;
   return (
     <>

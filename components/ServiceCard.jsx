@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import CustomLink from './Utils/CustomLink';
 import CustomImage from './Utils/CustomImage';
 

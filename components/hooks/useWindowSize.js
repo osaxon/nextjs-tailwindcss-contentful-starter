@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react';
 
-function handleResize(fn) {
-  fn({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-}
-
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
   });
 
-  handleResize(setWindowSize);
+  function handleResize() {
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

@@ -2,8 +2,8 @@ import CustomLink from 'components/Utils/CustomLink.jsx';
 
 const links = [
   { href: '/about', label: 'About' },
-  { href: '/Services', label: 'Services' },
-  { href: '/Contact', label: 'Contact' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const NavLinks = (props) => {
