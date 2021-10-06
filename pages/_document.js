@@ -91,7 +91,7 @@ class MyDocument extends Document {
           />
           <meta name='theme-color' content='#ffffff' />
         </Head>
-        <body>
+        <body className='bg-azure-900 bg-opacity-10 dark:bg-opacity-90 min-h-screen'>
           <Main />
           <NextScript />
         </body>

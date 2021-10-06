@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <nav className='hidden h-full items-center md:flex'>
       <CustomLink href='/'>
-        <div className='w-16 fill-red dark:fill-leaf'>
+        <div className=' w-16 fill-red dark:fill-leaf'>
           <SvgLogo />
         </div>
       </CustomLink>

@@ -1,26 +1,24 @@
 import Seo from '@/components/Utils/Seo';
 import SvgBall from '@/components/SvgComps/Ball';
+import SvgMoon from '@/components/SvgComps/SvgMoon';
+import SvgLogo from '@/components/SvgComps/SvgLogo';
 
 export default function Home() {
   return (
     <>
       <Seo templateTitle='Home' />
-      <section className='flex-grow flex py-4'>
-        <article className='px-6 flex flex-col md:pt-0 cursor-default md:mt-0 md:justify-center text-gray-900 layout'>
-          <div className='flex flex-col flex-grow justify-center items-center'>
-            <div className='flex flex-col items-center z-50'>
-              <h2 className='text-center text-3xl select-none'>
-                Next.JS starter with Tailwind CSS and Contentful CMS
-              </h2>
+      <div className='flex flex-col justify-center min-h-[calc(100vh-82px)]'>
+        <section className='w-full flex flex-col md:pt-0 cursor-default text-gray-900'>
+          <article className='layout flex flex-col justify-center items-center'>
+            <h2 className='text-center text-3xl select-none z-10'>
+              Next.JS starter with Tailwind CSS and Contentful CMS
+            </h2>
+            <div className='absolute md:w-2/5 w-2/3 z-0 fill-red dark:fill-leaf opacity-20'>
+              <SvgBall />
             </div>
-            <div className='absolute bottom-1/3 '>
-              <div className='w-64 h-64 dark:fill-leaf fill-red transition-all'>
-                <SvgBall />
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
+          </article>
+        </section>
+      </div>
     </>
   );
 }
