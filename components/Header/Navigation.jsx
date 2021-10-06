@@ -4,7 +4,7 @@ import NavLinks from './NavLinks';
 
 const Navigation = () => {
   return (
-    <nav className='hidden border items-center md:flex'>
+    <nav className='hidden items-center md:flex'>
       <div className='w-16 fill-green'>
         <SvgLogo />
       </div>
