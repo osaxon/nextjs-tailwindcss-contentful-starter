@@ -2,7 +2,7 @@ import React from 'react';
 import Seo from '@/components/Utils/Seo';
 
 import { createClient } from 'contentful';
-import CustomLink from '@/components/CustomLink';
+import CustomLink from '@/components/Utils/CustomLink';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
