@@ -9,20 +9,20 @@ const DarkModeToggle = () => {
   const [colorTheme, setTheme] = useDarkMode();
 
   return (
-    <div className='flex items-center justify-end pt-2 layout'>
-      <div className='rounded-full h-10 w-10'>
+    <div className='flex items-center justify-end h-full'>
+      <button className='rounded-full h-10 w-10'>
         {loaded && colorTheme === 'light' ? (
           <SvgBulb
-            className='stroke-red rounded-full p-1'
+            className='stroke-leaf rounded-full p-1'
             onClick={() => setTheme('light')}
           />
         ) : (
           <SvgMoon
-            className='stroke-leaf rounded-full p-1'
+            className='stroke-red rounded-full p-1'
             onClick={() => setTheme('dark')}
           />
         )}
-      </div>
+      </button>
     </div>
   );
 };

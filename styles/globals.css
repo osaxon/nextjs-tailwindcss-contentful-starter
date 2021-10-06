@@ -17,23 +17,23 @@
 
   /* Write your own custom base styles here */
   h1 {
-    @apply text-3xl font-bold md:text-5xl select-none;
+    @apply text-3xl font-bold md:text-5xl text-azure-900 dark:text-azure-50 select-none;
   }
 
   h2 {
-    @apply text-2xl font-bold md:text-4xl text-gray-700 dark:text-gray-50 select-none;
+    @apply text-2xl font-bold md:text-4xl text-azure-900 dark:text-azure-50 select-none;
   }
 
   h3 {
-    @apply text-xl font-bold md:text-3xl text-gray-700 dark:text-gray-50 select-none;
+    @apply text-xl font-bold md:text-3xl text-azure-900 dark:text-azure-50 select-none;
   }
 
   h4 {
-    @apply text-lg font-bold text-gray-700 dark:text-gray-50 select-none;
+    @apply text-lg font-bold text-azure-900 dark:text-azure-50 select-none;
   }
 
   p {
-    @apply text-gray-700 dark:text-gray-50;
+    @apply text-azure-900 dark:text-azure-50;
   }
 
   body {
@@ -57,7 +57,15 @@
 @layer utilities {
   .animated-underline {
     background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(to right, #7462e0, #7462e0);
+      linear-gradient(to right, #e56d6d, #d93c3e);
+    background-size: 100% 2px, 0% 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-out;
+  }
+  .animated-underline-dark {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(to right, #13a2ad, #0d828d);
     background-size: 100% 2px, 0% 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -74,12 +82,22 @@
     background-size: 0% 2px, 100% 2px;
   }
 
+  .animate-drop-in {
+    animation: drop 2s linear 0s 1 backwards;
+  }
+
   @-webkit-keyframes move {
     from {
       -webkit-transform: translateX(-100px);
     }
     to {
       -webkit-transform: translateX(1000px);
+    }
+  }
+
+  @-webkit-keyframes drop {
+    from {
+      -webkit-transform: translateY(-100px);
     }
   }
 }

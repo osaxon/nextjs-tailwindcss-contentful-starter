@@ -12,7 +12,7 @@ export default function CustomLink({
       {...rest}
       openNewTab={openNewTab}
       className={clsx(
-        'inline-flex items-center justify-center font-bold',
+        'inline-flex items-center justify-center text-xl font-bold animated-underline dark:animated-underline-dark',
         className
       )}
     >

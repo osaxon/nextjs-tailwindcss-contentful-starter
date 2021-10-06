@@ -25,7 +25,7 @@ const MobileNavigation = () => {
         onClick={() => setOpen(!open)}
       />
       {open && (
-        <div className='absolute w-60 top-20 border-t-leaf-400 dark:border-t-cerise-500 border-t-2 bg-azure-900 dark:bg-opacity-90 bg-opacity-10 transition-all'>
+        <div className='absolute border w-36 top-20 h-32 border-t-leaf-400 dark:border-t-cerise-500 border-t-2 bg-azure-900 dark:bg-opacity-90 bg-opacity-10 transition-all'>
           <NavLinks closeMenu={closeMenu} />
         </div>
       )}

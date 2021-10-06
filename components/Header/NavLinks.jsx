@@ -8,9 +8,9 @@ const links = [
 
 const NavLinks = (props) => {
   return (
-    <ul className='flex flex-col md:flex-row w-full m-2 justify-between'>
+    <ul className='flex flex-col md:flex-row h-full justify-around'>
       {links.map(({ href, label }) => (
-        <li onClick={props.closeMenu} key={href} className='px-2 text-azure-50'>
+        <li onClick={props.closeMenu} key={href} className='px-2'>
           <CustomLink href={href}>
             <h4>{label}</h4>
           </CustomLink>
