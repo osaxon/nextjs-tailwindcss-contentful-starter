@@ -1,5 +1,5 @@
 import React from 'react';
-import Seo from '@/components/Seo';
+import Seo from '@/components/Utils/Seo';
 
 import { createClient } from 'contentful';
 import CustomLink from '@/components/CustomLink';
