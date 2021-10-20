@@ -20,12 +20,12 @@ const MobileNavigation = () => {
     <nav className='md:hidden flex layout items-center h-20'>
       <CgMenuRound
         className='cursor-pointer md:hidden'
-        size='40px'
+        size='48px'
         color='white'
         onClick={() => setOpen(!open)}
       />
       {open && (
-        <div className='absolute w-36 top-20 h-32 border-t-leaf-400 dark:border-t-cerise-500 border-t-2 bg-azure-900 dark:bg-opacity-50 bg-opacity-10 transition-all'>
+        <div className='absolute w-2/5 top-20 h-48 border-t-leaf-400 dark:border-t-cerise-500 border-t-2 bg-azure-900 dark:bg-opacity-50 bg-opacity-10 transition-all'>
           <NavLinks closeMenu={closeMenu} />
         </div>
       )}
